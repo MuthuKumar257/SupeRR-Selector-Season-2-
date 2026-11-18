@@ -98,6 +98,35 @@ st.markdown("""
         visibility: hidden !important;
     }
 
+    /* Hide all horizontal and vertical scrollbars across the entire app */
+    * {
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+    }
+    ::-webkit-scrollbar {
+        width: 0px !important;
+        height: 0px !important;
+        display: none !important;
+        background: transparent !important;
+    }
+    ::-webkit-scrollbar-thumb {
+        display: none !important;
+        background: transparent !important;
+    }
+    ::-webkit-scrollbar-track {
+        display: none !important;
+        background: transparent !important;
+    }
+    ::-webkit-scrollbar-corner {
+        display: none !important;
+        background: transparent !important;
+    }
+    html, body, .stApp, .main, section[data-testid="stSidebar"], [data-testid="stSidebarContent"] {
+        overflow-x: hidden !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+    }
+
     /* Container padding adjustment without top header */
     .block-container {
         padding-top: 1.5rem !important;
