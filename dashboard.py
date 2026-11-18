@@ -29,7 +29,6 @@ from src.config import (
 )
 from src.data_loader import load_dataset
 from src.pressure_engine import compute_predelivery_state
-from outputs.pressure_model import train_and_evaluate
 
 # -----------------------------------------------------------------------------
 # 1. PAGE SETUP & GRAPHITE THEME (UNSLOP SYSTEM)
