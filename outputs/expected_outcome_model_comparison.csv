@@ -1,0 +1,5 @@
+Target,Model,RMSE,MAE,R2,Pred_Variance,Target_Variance
+Batting Runs,Constant Baseline (Mean),1.7859,1.3422,-0.0019,0.0,3.1835
+Batting Runs,Ridge Linear Regressor,1.7707,1.3306,0.0151,0.0635,3.1835
+Batting Runs,Poisson GLM Regressor,1.7728,1.3363,0.0128,0.0564,3.1835
+Batting Runs,HistGradientBoosting Regressor,1.7683,1.329,0.0178,0.0863,3.1835
