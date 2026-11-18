@@ -93,6 +93,10 @@ st.markdown("""
         display: none !important;
         visibility: hidden !important;
     }
+    [data-testid="stLogo"] {
+        display: none !important;
+        visibility: hidden !important;
+    }
 
     /* Container padding adjustment without top header */
     .block-container {
@@ -447,25 +451,6 @@ data_dir_input = DEFAULT_DATA_DIR
 output_dir_input = DEFAULT_OUTPUT_DIR
 
 with st.sidebar:
-    if os.path.exists(LOGO_PATH):
-        try:
-            with open(LOGO_PATH, "rb") as f_img:
-                logo_b64 = base64.b64encode(f_img.read()).decode()
-            st.markdown(
-                f"""
-                <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 1.25rem;">
-                    <img src="data:image/jpeg;base64,{logo_b64}" 
-                         style="width: 110px; height: 110px; border-radius: 14px; object-fit: contain; 
-                                border: 1.5px solid rgba(230, 6, 147, 0.4); 
-                                box-shadow: 0 4px 16px rgba(230, 6, 147, 0.25); background-color: #19191b;" 
-                         alt="Rajasthan Royals Logo" />
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
-        except Exception:
-            pass
-
     st.markdown('<div class="stat-label" style="margin-bottom: 8px;">Navigation</div>', unsafe_allow_html=True)
     
     nav = st.radio(
